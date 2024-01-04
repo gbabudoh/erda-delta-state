@@ -1,0 +1,70 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Adjusted gap for clarity */
+    padding: 10px;
+    width: calc(100% - 20px); /* Adjusting width to account for padding */
+}
+
+.grid-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centering content */
+    background: #edebeb;
+}
+
+.left {
+    position: relative;
+}
+
+.rotating-circle {
+    border: 10px solid gray;
+    border-radius: 50%;
+    width: 150px; /* Adjusted for visibility */
+    height: 150px; /* Adjusted for visibility */
+    animation: rotate-circle 5s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotate-circle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating-image {
+    width: 80%; /* Adjusted size */
+    height: 80%; /* Adjusted size */
+    border-radius: 50%;
+    animation: rotate-image 5s linear infinite reverse;
+}
+
+@keyframes rotate-image {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.right {
+    background-color: #b0e0e6; /* Example light sky blue color */
+    padding: 10px;
+}
+
+.right h3, .right p {
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

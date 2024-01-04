@@ -1,0 +1,98 @@
+/* Base styles */
+.diaspora-image-banner {
+    width: 100%;
+    height: 600px; /* Fixed height for larger screens */
+    overflow: hidden;
+}
+
+.diaspora-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales correctly */
+}
+
+/* Content section below the banner */
+.page-content {
+    margin: 8px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Styles for the Diaspora Activities section */
+.activities {
+    margin: 8px;
+}
+
+.activities .diaspora-h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px; /* Space between title and grid items */
+}
+
+.diaspora-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns layout */
+    gap: 15px; /* Adjust gap for visual appeal */
+}
+
+.diaspora-grid-item {
+    position: relative;
+    height: 250px; /* Fixed height for grid items */
+    overflow: hidden; /* Ensures images do not overflow their container */
+}
+
+.diaspora-grid-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the container fully */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.overlay h2 {
+    margin-top: 0; /* Remove top margin for the title */
+    margin-bottom: 0; /* Remove bottom margin between title and description */
+}
+
+.overlay p {
+    margin-top: 0; /* Remove top margin for the description */
+}
+
+/* Additional styles for text alignment */
+.diaspora-p {
+    text-align: left;
+    margin-top: 25px;
+}
+
+/* Responsive design adjustments */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for tablet devices */
+    .diaspora-image-banner {
+        height: 300px; /* Smaller height for tablets */
+    }
+
+    .diaspora-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for tablets */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjustments for mobile devices */
+    .diaspora-image-banner {
+        height: 200px; /* Even smaller height for mobile devices */
+    }
+
+    .diaspora-grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+}

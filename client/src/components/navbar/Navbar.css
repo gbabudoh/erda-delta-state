@@ -1,0 +1,118 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    color: white;
+    padding: 0rem 1rem;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top of the page */
+    padding: 8px;
+    border-bottom: 1px solid grey;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+
+}
+
+.navbar-logo img {
+    width: 280px;
+    height: auto;
+    margin-bottom: -2px;
+    margin-top: -1px;
+}
+
+
+.nav-items {
+    display: flex;
+    gap: 1rem;
+	
+}
+
+.nav-items a {
+    color: #424141;
+    text-decoration: none;
+	margin-right: 40px;	
+}
+
+.nav-items a:hover {
+    color: orange; /* Change to orange on hover */
+    text-decoration: none; /* Removes underline */
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    border: 1px solid orange;
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+}
+
+.id-card-registration-btn {
+
+    color: #fff;
+    background: #424140;
+    border: none;
+    padding:  5px 7px;
+    font-size: 17px;  
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid #f9ce06;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.id-card-registration-btn:hover {
+    background-color: #333; /* Change background on hover */
+    /* Add any other hover effects you desire */
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #eaeaea;
+        width: 100%;
+        text-align: right;
+        padding: 1rem;
+        margin-top: -6px;
+        z-index: 1100;
+    }
+
+    .nav-items.open {
+        display: flex;
+        height: 100vh;
+    }
+
+    .nav-items a {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #bab7b7; /* Adds a border line */
+        padding-bottom: 0.5rem; /* Optional padding for better spacing */
+    }
+
+    .navbar-toggle {
+        display: block;
+        margin-left: 6px
+    }
+
+    .id-card-registration-btn {
+        padding: 3px 5px; /* Reduced padding */
+        font-size: 13px; /* Smaller font size */
+        /* Adjust other properties as needed */
+    }
+
+    .navbar-logo img {
+        width: 160px; /* Half the original width or as per your requirement */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 0; /* Adjust if needed */
+        margin-top: 0; /* Adjust if needed */
+    }
+
+
+
+    
+}

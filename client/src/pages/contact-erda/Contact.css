@@ -1,0 +1,83 @@
+.contact-container {
+    max-width: 80%; /* Adjust the width as per requirement */
+    margin: auto;
+    border: 1px solid gainsboro;
+    padding: 20px;
+}
+
+.message {
+    background-color: gainsboro;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form button {
+    padding: 10px;
+    margin: 10px 20px; /* 20px margin on left and right */
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: auto; /* Default width for smaller devices */
+}
+
+.contact-form textarea {
+    height: 300px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    background-color: #424140;
+    color: white;
+  }
+
+
+
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        max-width: 90%;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea,
+    .contact-form button {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        max-width: 100%;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea,
+    .contact-form button {
+        width: auto;
+    }
+}
+
+/* Media query for desktop and large tablet screens */
+@media (min-width: 768px) {
+    .contact-form button {
+        width: 50%; /* Set button width to 50% */
+        margin-left: auto; /* Center the button */
+        margin-right: auto;
+    }
+}

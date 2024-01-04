@@ -1,0 +1,139 @@
+/* Basic styling for the entire page */
+.governor-page {
+	max-width: 98%;
+	margin: auto;
+	padding: 1%;
+  }
+  
+  /* Styling for the governor's message section */
+  .governors-message {
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  /* Style for section titles */
+  .governor-section-title h1 {
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 20px;
+	background: gainsboro;
+	padding: 15px;
+  }
+  
+  /* Grid layout for the first section of images */
+  .governor-image-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+	gap: 20px;
+	margin-bottom: 20px;
+  }
+  
+  .image-column {
+	position: relative;
+	overflow: hidden; /* Ensures overlay does not exceed the image */
+  }
+  
+  .image-column img {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  /* Overlay for grid images */
+  .overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0; /* Ensures it doesn't overflow horizontally */
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 10px;
+  }
+  
+  /* Adjusting margins for h1 and p tags inside grid overlays */
+  .overlay h1, .overlay p {
+	margin: 0;
+  }
+  
+  /* Gallery section styling */
+  .gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+	gap: 20px;
+  }
+  
+  .gallery-item {
+	position: relative;
+	overflow: hidden; /* Ensures overlay does not exceed the image */
+  }
+  
+  .gallery-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  /* Gallery text overlay */
+  .gallery-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0; /* Ensures it doesn't overflow horizontally */
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 10px;
+  }
+  
+  /* Adjusting margins for h2 and p tags inside gallery overlays */
+  .gallery-text h2, .gallery-text p {
+	margin: 0;
+  }
+
+
+  /* additional css  */
+
+  .governor-p {
+	text-align: left;
+  }
+
+  .governor-h1 {
+	background: gainsboro;
+    padding: 10px;
+  }
+
+  .governor-gal-h1 {
+	text-align: center;
+	margin-top: 50px;
+	background: gainsboro;
+  	padding: 10px;
+  }
+  
+
+
+  /* additional css  */
+
+
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+	.governor-image-grid, .gallery {
+	  grid-template-columns: 1fr; /* 1 column for smaller screens */
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.governor-image-grid, .gallery {
+	  grid-template-columns: 1fr; /* 1 column for very small screens */
+	}
+  }
+  
